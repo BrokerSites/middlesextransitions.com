@@ -11,7 +11,7 @@
     <meta property="og:title" content="Middlesex Transitions Website">
     <meta property="og:description" content="Structured, safe residence for men in recovery.">
     <meta property="og:image" content="https://cafftestbucket.s3.us-east-2.amazonaws.com/preview.webp">
-    <script src="js/contact.js"> </script>
+    <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/contactform.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -141,7 +141,7 @@
                     Fill out the form below to join our waitlist, and will be in touch based on elegibility.
                 </p>
                 <!--Form-->
-                <form class="cs-form" id="cs-form-323" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
+                <form class="cs-form" id="cs-form" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
                     <label class="cs-label cs-name">
                         Name
                         <input class="cs-input" required type="text" id="name" name="name"
@@ -175,19 +175,10 @@
                         <textarea class="cs-input cs-textarea" required name="Message" id="message"
                             placeholder="Write message..."></textarea>
                     </label>
-                    <div class="g-recaptcha" data-sitekey="6LetUvsmAAAAAKgAO9qPe_gPcnMZd3_xTsVw3z57" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
+                    <div class="g-recaptcha" data-sitekey="6LdVznApAAAAAMyv788c6zf7RG5qaOclPo6xqGgZ" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
                     <input type="hidden" id="recaptcha-response" name="recaptcha-response" />
-                    <script>
-                        function ccb(response) {
-                          $(':input[type="submit"]').prop('disabled', false);
-                          $('#recaptcha-response').val(response);
-                        }
-                    
-                        function onExpired() {
-                          $('button[type="submit"]').prop('disabled', true);
-                          $('#recaptcha-response').val('');
-                        }
-                      </script>
+                    <input type="hidden" id="destination" name="destination" value="info@middlesextransitions.com">
+                    <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/callback.js"> </script>
                     <button class="cs-button-solid cs-submit" disabled type="submit">Send Message</button>
                 </form>
             </div>
@@ -292,7 +283,7 @@
 
 
     <script src="js/nav.js"></script>
-    <script src="js/loader.js"></script>
+    <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/loader.js"></script> 
 </body>
 
 </html>
